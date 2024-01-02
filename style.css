@@ -1,0 +1,126 @@
+:root{
+    --color-very-light-grayish-blue: hsl(240, 78%, 98%);
+    --color-light-grayish-blue: hsl(234, 14%, 74%);
+    --color-grayish-blue: hsl(233, 13%, 49%);
+    --color-dark-grayish-blue: hsl(232, 13%, 33%);
+    --linear-gradient-btn: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    --linear-gradient-btn-hover: linear-gradient(to right, hsl(236, 72%, 79%, 0.6), hsl(237, 63%, 64%, 0.6));
+  }
+
+  .pricing-component-head, .pricing-component-body{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .pricing-component-body div .card-pro{
+    background: var(--linear-gradient-btn);
+  }
+
+  .card-pricing-dolar{
+    font-size: 36px;
+  }
+
+  .card p {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .card-basic-master { 
+    color: var(--color-dark-grayish-blue);
+  }
+
+  .card-pro{
+    color: var(--color-very-light-grayish-blue);
+  }
+
+  .btn-outline-pricing-component{ 
+    border: 1px solid #fff; 
+    color: hsl(237, 63%, 64%);
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--color-very-light-grayish-blue);
+  }
+
+  .btn-outline-pricing-component:hover{
+    background-color: transparent;
+    border: 1px solid #fff; 
+  }
+
+  .btn-pricing-component{
+    border: 1px solid hsla(237, 63%, 64%, 0.5);
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: var(--linear-gradient-btn);
+    color: var(--color-very-light-grayish-blue);
+  }
+
+  .btn-pricing-component:hover{
+    background: transparent;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(237, 63%, 64%);
+  }
+
+  .btn-pricing-component:active{
+    color: hsl(237, 63%, 64%) !important;
+  }
+
+  .checkbox-content{
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    background: var(--linear-gradient-btn);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .checkbox-content::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-very-light-grayish-blue);
+    margin: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    transition: .3s ease;
+  }
+
+  .checkbox-content:hover{
+    background: var(--linear-gradient-btn-hover);
+  }
+
+
+  #checkbox-toggle:checked + .checkbox-content::before{
+    transform: translateX(30px);
+  }
+
+  .pricing-component-head-title{
+    color: var(--color-dark-grayish-blue);
+  }
+
+  .checkbox-state{
+    color: var(--color-light-grayish-blue);
+  }
+  
+
+  @media (max-width: 991.98px) { 
+    .pricing-component-body > div{
+      flex-direction: column;
+      padding: 1.5rem !important;
+      gap: 2rem;
+    }
+
+    .card-pro{
+      padding: 1.5rem 3rem !important;
+    }
+    
+    .card-price{
+      font-size: 3.5rem;
+      margin-top: .75rem;
+    }
+  }
